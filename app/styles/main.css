@@ -1,0 +1,17 @@
+/* Space out content a bit */
+body {}
+
+.superimpose,
+.confirmation
+{
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.confirmation
+{
+  top: 600px;
+  left: 0;
+}
