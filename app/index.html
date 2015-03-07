@@ -18,15 +18,18 @@
   </head>
   <body>
     <div class="container">
-      <article>
-        <section>
-          <button id="stop">Stop</button>
-          <button id="photo">Photo</button>
-        </section>
-        <video id="video" class="superimpose" autoplay></video>
-        <canvas id="superimpose" class="superimpose"></canvas>
-        <canvas id="confirmation" class="confirmation"></canvas>
-      </article>
+      <div class="img_area">
+        <video id="video" class="video" autoplay></video>
+        <canvas id="superimpose" class="superimpose" crossOrigin="anonymous"></canvas>
+        <canvas id="confirmation" class="confirmation" crossOrigin="anonymous"></canvas>
+      </div>
+      <div class="right_group">
+        <button id="stop">Stop</button>
+        <button id="photo">Photo</button>
+        <button id="changeCamera">changeCamera</button>
+        <div id="qrdecode"></div>
+        <div id="leap"></div>
+      </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -52,6 +55,24 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/leap-0.6.4.min.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/grid.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/version.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/detector.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/formatinf.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/errorlevel.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/bitmat.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/datablock.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/bmparser.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/datamask.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/rsdecoder.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/gf256poly.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/gf256.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/decoder.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/qrcode.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/findpat.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/alignpat.js"></script>
+        <script type="text/javascript" src="scripts/jsqrcode/databr.js"></script>
         <!-- endbuild -->
 </body>
 </html>

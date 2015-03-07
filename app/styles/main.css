@@ -1,17 +1,39 @@
 /* Space out content a bit */
 body {}
 
-.superimpose,
-.confirmation
+.container
+{
+  display: flex;
+  width: 1050px;
+}
+
+.right_group
+{
+  width: 10px;
+}
+
+.img_area
+{
+  position: relative;
+}
+
+/* かぶせ */
+.video
+{
+  width: 100%;
+  z-index: 1;
+}
+.superimpose
 {
   width: 100%;
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 0;
+  z-index: 10;
 }
 
+/* 確認 */
 .confirmation
 {
-  top: 600px;
   left: 0;
 }
