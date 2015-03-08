@@ -15,19 +15,14 @@ $(function() {
        setCamera(nowCameraIndex);
   });
 
-  // 変数
-  var video = document.getElementById("video");
-  var canvas = document.getElementById('superimpose');
-  var context = canvas.getContext('2d');
-  var localMediaStream;
-  // クリックイベント
-  $('#stop').on('click', function() {
-    localMediaStream.stop();
-  });
   $('#changeCamera').on('click', function() {
     changeCamera();
   });
 
+  // クリックイベント
+  $('#stop').on('click', function() {
+    localMediaStream.stop();
+  });
   function changeCamera() {
     nowCameraIndex++;
     if (nowCameraIndex >= cameraData.length) {
@@ -51,37 +46,5 @@ $(function() {
 
     }
   }
-
-  // 映像読み込んで重ねる
-  var capture = function () {
-    var width = video.videoWidth;
-    var height = video.videoHeight;
-    canvas.width = width;
-    canvas.height = height;
-    context.globalAlpha = 0.5;
-    context.drawImage(video, 0, 0);
-    var canvasConfirm = document.getElementById('confirmation');
-    canvasConfirm.width = width;
-    canvasConfirm.height = height;
-    var confirm = canvasConfirm.getContext('2d');
-    confirm.drawImage(video, 0, 0);
-  }
-
-  // 定期的に取り込む
-  // 最終的にはleap-motionのloopに入れていい
-  function captureToCanvas() {
-    capture();
-    //var img = context.getImageData(0, 0, canvas.width, canvas.height);
-    setTimeout(captureToCanvas, 500);
-  }
-  setTimeout(captureToCanvas, 500);
-
-  // leap-motion
-  /*
-  var controller = new Leap.Controller();
-  controller.loop(function(frame) {
-    $('#leap').html(frame.dump());
-  });
-  */
 
 });

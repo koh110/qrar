@@ -1,0 +1,122 @@
+#glassSuperimpose, #helpDisp, #helpContent {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+#glassSuperimpose {
+  z-index: 20;
+}
+#glassSuperimpose.show {
+  opacity: 1;
+}
+
+#helpDisp {
+  height : 100%;
+  z-index: 21;
+  background-color: black;
+}
+#helpDisp.show {
+  opacity: 0.3;
+}
+
+#helpContent {
+  height : 100%;
+  z-index: 22;
+}
+#helpContent.show {
+  opacity: 0.7;
+}
+
+
+#helpGroup {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.helpUnit {
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -moz-transform: rotateY(90deg);
+  -webkit-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  width: 60%;
+  top: 20px;
+  left: 40px;
+  padding :10px 0;
+  height: 170px;
+  border: solid 4px white;
+  border-radius: 10px;
+  color: white;
+}
+.helpUnit.show {
+  -moz-transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+}
+
+.thumbnail {
+  width: 35%;
+  text-align: center;
+  height: 100%;
+  border-right: solid 2px #FFF;
+}
+
+.info  {
+  margin-top: -100px;
+  padding-right: 50px;
+  float: right;
+}
+
+.helpUnit img {
+  height: 100%;
+}
+
+#bookIcon,
+#upIcon,
+#webIcon,
+#shareIcon
+{ 
+  position: absolute;
+  width: 150px;
+  top: 20px;
+  left: 20px;
+  z-index: 50;
+}
+
+#upIcon
+{
+  left: 240px;
+}
+
+#webIcon
+{
+  left: 460px;
+}
+
+#shareIcon
+{
+  left: 680px;
+}
+
+#bookIcon img,
+#upIcon img,
+#webIcon img,
+#shareIcon img
+{
+  width: 100%;
+}

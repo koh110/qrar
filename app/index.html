@@ -3,76 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>qrar</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="help.css">
   </head>
   <body>
     <div class="container">
       <div class="img_area">
         <video id="video" class="video" autoplay></video>
         <canvas id="superimpose" class="superimpose" crossOrigin="anonymous"></canvas>
+        <canvas id="glassSuperimpose" class="superimpose" crossOrigin="anonymous"></canvas>
         <canvas id="confirmation" class="confirmation" crossOrigin="anonymous"></canvas>
+        <canvas id="bookarea"></canvas>
+        <canvas id="bookareaRight"></canvas>
+        <canvas id="range"></canvas>
+        <canvas id="hand"></canvas>
+
+        <div id="bookIcon"><img src="img/icon/book_icon.png"></div>
+        <div id="upIcon"><img src="img/icon/up_icon.png"></div>
+        <div id="webIcon"><img src="img/icon/web_icon.png"></div>
+        <div id="shareIcon"><img src="img/icon/share_icon.png"></div>
+        <div id="helpDisp"></div>
+        <div id="helpContent">
+          <div id="helpGroup">
+            <div class="helpUnit"><div class="thumbnail"><img src="title.jpg"></div><div class="info">鷹の爪</div></div>
+            <div class="helpUnit"><div class="thumbnail"><img src="ero.jpg"></div><div class="info">むふふ</div></div>
+            <div class="helpUnit"><div class="thumbnail"><img src="aa_title.jpg"></div><div class="info">あすきー</div></div>
+          </div>
+        </div>
       </div>
       <div class="right_group">
         <button id="stop">Stop</button>
         <button id="photo">Photo</button>
+        <button id="scaleMode">scaleMode</button>
         <button id="changeCamera">changeCamera</button>
-        <div id="qrdecode"></div>
+        <button id="helpCapture">helpCapture</button>
+        <button id="closeHelp">closeHelp</button>
+        <button id="chooseTaka">takanotume</button>
+        <button id="chooseMufufu">mufufu</button>
+        <button id="choose2ch">aa</button>
+        <div id="book"></div>
+        <div id="page"></div>
+        <div id="handvalue"></div>
+        <div id="handstatus"></div>
+        <div id="color"></div>
         <div id="leap"></div>
+        <div id="leapdump"></div>
       </div>
     </div>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="bower_components/bootstrap/js/affix.js"></script>
-        <script src="bower_components/bootstrap/js/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/modal.js"></script>
-        <script src="bower_components/bootstrap/js/transition.js"></script>
-        <script src="bower_components/bootstrap/js/button.js"></script>
-        <script src="bower_components/bootstrap/js/popover.js"></script>
-        <script src="bower_components/bootstrap/js/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <script src="scripts/leap-0.6.4.min.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/grid.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/version.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/detector.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/formatinf.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/errorlevel.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/bitmat.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/datablock.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/bmparser.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/datamask.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/rsdecoder.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/gf256poly.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/gf256.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/decoder.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/qrcode.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/findpat.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/alignpat.js"></script>
-        <script type="text/javascript" src="scripts/jsqrcode/databr.js"></script>
-        <!-- endbuild -->
-</body>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="draw.js"></script>
+    <script src="camera.js"></script>
+    <script src="menu.js"></script>
+    <script src="page.js"></script>
+    <script src="book.js"></script>
+    <script src="leap-0.6.4.min.js"></script>
+    <script src="Vague.js"></script>
+    <script src="helpmenu.js"></script>
+  </body>
 </html>

@@ -1,15 +1,24 @@
 /* Space out content a bit */
+body {}
 
 .container
 {
-  backgroud-color: black;
   display: flex;
   width: 1050px;
 }
 
 .right_group
 {
-  width: 10px;
+  width: 30px;
+}
+
+#handvalue
+{
+  width: 100px;
+}
+#book
+{
+  width: 100px;
 }
 
 .img_area
@@ -23,12 +32,22 @@
   width: 100%;
   z-index: 1;
 }
-.superimpose
+.superimpose,
+#range,
+#hand,
+#bookarea,
+#bookareaRight
 {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 20;
+}
+
+#range,
+#hand
+{
   z-index: 10;
 }
 
